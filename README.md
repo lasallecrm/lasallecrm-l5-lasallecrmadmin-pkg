@@ -1,4 +1,4 @@
-# USER MANAGEMENT
+# LASALLECRM ADMINISTRATION 
 
 [![Build Status](https://img.shields.io/travis/lasallecrm/lasallecrm-l5-lasallecrmadmin-pkg/master.svg?style=flat-square)](https://travis-ci.org/lasallecrm/lasallecrm-l5-lasallecrmadmin-pkg)
 [![Total Downloads](https://img.shields.io/packagist/dt/lasallecrm/lasallecrmadmin.svg?style=flat-square)](https://packagist.org/packages/lasallecrm/lasallecrmadmin)
@@ -9,7 +9,7 @@
 [![Laravel](https://img.shields.io/badge/Laravel-v5-brightgreen.svg?style=flat-square)](http://laravel.com)
 
 
-To Do package made specifically for my LaSalle Customer Relationship Management package. 
+Administration package for the LaSalle Customer Relationship Management package.
 
 
 ## Security
