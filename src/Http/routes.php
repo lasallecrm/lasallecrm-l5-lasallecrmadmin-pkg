@@ -35,9 +35,10 @@
 Route::group(array('prefix' => 'admin'), function()
 {
     Route::resource('luaddresses', 'AdminLookupAddressTypesController');
-   // Route::resource('categories', 'AdminCategoryController');
-   // Route::resource('tags', 'AdminTagController');
-   // Route::resource('postupdates', 'AdminPostupdateController');
-   // Route::resource('users', 'AdminUserController');
+    Route::resource('luemails', 'AdminLookupEmailTypesController');
+    Route::resource('lusocials', 'AdminLookupSocialTypesController');
+    Route::resource('lutelephones', 'AdminLookupTelephoneTypesController');
+    Route::resource('luwebsites', 'AdminLookupWebsiteTypesController');
+
 });
 
