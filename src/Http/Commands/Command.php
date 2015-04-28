@@ -1,4 +1,4 @@
-<?php namespace Lasallecrm\Lasallecrmadmin;
+<?php namespace Lasallecrm\Lasallecrmadmin\Commands;
 
 /**
  *
@@ -31,42 +31,8 @@
  *
  */
 
-class Version {
+abstract class Command {
 
-	/**
-	 * This package's version number.
-	 *
-	 * @var string
-	 */
-	const VERSION = '0.9.0';
-
-
-	/**
-	 * This package's name.
-	 *
-	 * @var string
-	 */
-	const PACKAGE = 'Administration package for the LaSalle Customer Relationship Management package';
-
-
-	/**
-	 * Get the version number of this package.
-	 *
-	 * @return string
-	 */
-	public function version()
-	{
-		return static::VERSION;
-	}
-
-	/**
-	 * Get the name of this package.
-	 *
-	 * @return string
-	 */
-	public function packageName()
-	{
-		return static::PACKAGE;
-	}
+    //
 
 }

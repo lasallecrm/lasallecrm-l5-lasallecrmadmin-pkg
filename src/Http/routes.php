@@ -1,4 +1,4 @@
-<?php namespace Lasallecrm\Lasallecrmadmin;
+<?php
 
 /**
  *
@@ -31,42 +31,13 @@
  *
  */
 
-class Version {
 
-	/**
-	 * This package's version number.
-	 *
-	 * @var string
-	 */
-	const VERSION = '0.9.0';
+Route::group(array('prefix' => 'admin'), function()
+{
+    Route::resource('luaddresses', 'AdminLookupAddressTypesController');
+   // Route::resource('categories', 'AdminCategoryController');
+   // Route::resource('tags', 'AdminTagController');
+   // Route::resource('postupdates', 'AdminPostupdateController');
+   // Route::resource('users', 'AdminUserController');
+});
 
-
-	/**
-	 * This package's name.
-	 *
-	 * @var string
-	 */
-	const PACKAGE = 'Administration package for the LaSalle Customer Relationship Management package';
-
-
-	/**
-	 * Get the version number of this package.
-	 *
-	 * @return string
-	 */
-	public function version()
-	{
-		return static::VERSION;
-	}
-
-	/**
-	 * Get the name of this package.
-	 *
-	 * @return string
-	 */
-	public function packageName()
-	{
-		return static::PACKAGE;
-	}
-
-}

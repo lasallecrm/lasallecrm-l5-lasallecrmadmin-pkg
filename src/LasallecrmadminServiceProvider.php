@@ -152,7 +152,7 @@ class LasallecrmadminServiceProvider extends ServiceProvider {
      */
     public function setupRoutes(Router $router)
     {
-        $router->group(['namespace' => 'Lasallecrm\Listmanagement\Http\Controllers'], function($router)
+        $router->group(['namespace' => 'Lasallecrm\Lasallecrmadmin\Http\Controllers'], function($router)
         {
             require __DIR__.'/Http/routes.php';
         });
@@ -166,10 +166,10 @@ class LasallecrmadminServiceProvider extends ServiceProvider {
      */
     public function setupViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../views', 'todo');
+        $this->loadViewsFrom(__DIR__.'/../views', 'lasallecrmadmin');
 
         $this->publishes([
-            __DIR__.'/../views' => base_path('resources/views/vendor/lasallecrmlistmanagement'),
+            __DIR__.'/../views' => base_path('resources/views/vendor/lasallecrmadmin'),
         ]);
 
     }
@@ -182,7 +182,7 @@ class LasallecrmadminServiceProvider extends ServiceProvider {
      */
     public function provides()
     {
-        return array('lasallecrmlistmanagement');
+        return array('lasallecrmadmin');
     }
 
 
