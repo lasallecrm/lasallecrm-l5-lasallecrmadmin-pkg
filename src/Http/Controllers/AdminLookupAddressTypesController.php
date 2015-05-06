@@ -1,4 +1,5 @@
-<?php namespace Lasallecrm\Lasallecrmadmin\Http\Controllers;
+<?php
+namespace Lasallecrm\Lasallecrmadmin\Http\Controllers;
 
 /**
  *
@@ -31,10 +32,8 @@
  *
  */
 
-
-use Lasallecms\Lookuptables\AdminLookupTableBaseController;
-use Lasallecms\Lookuptables\LookupRepository;
-
+use Lasallecms\Formhandling\Lookuptables\AdminLookupTableBaseController;
+use Lasallecms\Formhandling\Lookuptables\LookupRepository;
 
 class AdminLookupAddressTypesController extends AdminLookupTableBaseController
 {
@@ -95,12 +94,4 @@ class AdminLookupAddressTypesController extends AdminLookupTableBaseController
         // Inject the relevant model into the repository
         $this->repository->injectModelIntoRepository($this->model_namespace."\\".$this->model_class);
     }
-
-
-
-
-
-
-
-
 }
