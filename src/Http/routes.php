@@ -34,6 +34,9 @@
 
 Route::group(array('prefix' => 'admin'), function()
 {
+    Route::resource('crmaddresses', 'AdminCRMAddressesController');
+
+    // Lookup Tables
     Route::resource('luaddresses', 'AdminLookupAddressTypesController');
     Route::resource('luemails', 'AdminLookupEmailTypesController');
     Route::resource('lusocials', 'AdminLookupSocialTypesController');

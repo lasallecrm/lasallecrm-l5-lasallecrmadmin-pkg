@@ -32,14 +32,18 @@ namespace Lasallecrm\Lasallecrmadmin\Http\Controllers;
  *
  */
 
+// LaSalle Software
 use Lasallecms\Formhandling\Lookuptables\AdminLookupTableBaseController;
-use Lasallecms\Formhandling\Lookuptables\LookupRepository;
+use Lasallecms\Lasallecmsapi\Repositories\BaseRepository;
 
+/*
+ * Resource controller for administration of lookup_social_types
+ */
 class AdminLookupSocialTypesController extends AdminLookupTableBaseController
 {
-
     ///////////////////////////////////////////////////////////////////
     ////////////////     USER DEFINED PROPERTIES      /////////////////
+    ////////////////           MODIFY THESE!          /////////////////
     ///////////////////////////////////////////////////////////////////
 
     /*
@@ -83,9 +87,13 @@ class AdminLookupSocialTypesController extends AdminLookupTableBaseController
     ////////////////     DO NOT MODIFY BELOW!         /////////////////
     ///////////////////////////////////////////////////////////////////
 
-    public function __construct(LookupRepository $repository)
+    /*
+     * @param  Lasallecms\Lasallecmsapi\Repositories\BaseRepository
+     * @return void
+     */
+    public function __construct(BaseRepository $repository)
     {
-        // execute AdminController's construct method first in order to run the middleware
+        // execute AdminLookupTableBaseController's construct method first in order to run the middleware
         parent::__construct() ;
 
         // Inject repository

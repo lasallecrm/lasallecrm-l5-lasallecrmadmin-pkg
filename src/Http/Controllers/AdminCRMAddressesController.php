@@ -32,19 +32,20 @@ namespace Lasallecrm\Lasallecrmadmin\Http\Controllers;
  *
  */
 
-// LaSalle Software
-use Lasallecms\Formhandling\Lookuptables\AdminLookupTableBaseController;
-use Lasallecms\Lasallecmsapi\Repositories\BaseRepository;
+use Lasallecms\Formhandling\AdminFormhandling\AdminFormBaseController;
+use Lasallecrm\Lasallecrmapi\Models\Address;
 
-/*
- * Resource controller for administration of tags
- */
-class AdminLookupTelephoneTypesController extends AdminLookupTableBaseController
+class AdminCRMAddressesController extends AdminFormBaseController
 {
+
     ///////////////////////////////////////////////////////////////////
     ////////////////     USER DEFINED PROPERTIES      /////////////////
-    ////////////////           MODIFY THESE!          /////////////////
     ///////////////////////////////////////////////////////////////////
+
+    /*
+     * @var package name
+     */
+    protected $packageName = 'lasallecrmadmin';
 
     /*
      * @var Name of this package
@@ -54,17 +55,17 @@ class AdminLookupTelephoneTypesController extends AdminLookupTableBaseController
     /*
      * Lookup table type, in the plural
      */
-    protected $table_type_plural   = "Telephone Types";
+    protected $table_type_plural   = "Address Types";
 
     /*
      * Lookup table type, in the singular
      */
-    protected $table_type_singular  = "Telephone Type";
+    protected $table_type_singular  = "Address Type";
 
     /*
      * Lookup table name
      */
-    protected $table_name           = "lookup_telephone_types";
+    protected $table_name           = "lookup_address_types";
 
     /*
      * This lookup table's model class namespace
@@ -74,26 +75,36 @@ class AdminLookupTelephoneTypesController extends AdminLookupTableBaseController
     /*
      * This lookup table's model class
      */
-    protected $model_class          = "Lookup_telephone_type";
+    protected $model_class          = "Address";
 
     /*
      * The base URL of this lookup table's resource routes
      */
-    protected $resource_route_name   = "lutelephones";
+    protected $resource_route_name   = "crmaddresses";
 
 
+    protected $model;
+    public function __construct(Address $model)
+    {
+        $this->model = $model;
+    }
+    public function index()
+    {
+        $records = $this->model->all();
+
+        return view('lasallecrmadmin::' . config('lasallecmsadmin.admin_template_name') . '/addresses/index',
+            [
+                'records' => $records,
+            ]);
+    }
 
     ///////////////////////////////////////////////////////////////////
     ////////////////     DO NOT MODIFY BELOW!         /////////////////
     ///////////////////////////////////////////////////////////////////
 
-    /*
-     * @param  Lasallecms\Lasallecmsapi\Repositories\BaseRepository
-     * @return void
-     */
-    public function __construct(BaseRepository $repository)
+    public function __construct(LookupRepository $repository)
     {
-        // execute AdminLookupTableBaseController's construct method first in order to run the middleware
+        // execute AdminController's construct method first in order to run the middleware
         parent::__construct() ;
 
         // Inject repository
