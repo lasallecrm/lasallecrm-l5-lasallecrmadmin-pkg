@@ -49,37 +49,48 @@ class AdminLookupSocialTypesController extends AdminLookupTableBaseController
     /*
      * @var Name of this package
      */
-    protected $package_title        = "Customer Management";
+    public $package_title        = "Customer Management";
 
     /*
      * Lookup table type, in the plural
      */
-    protected $table_type_plural   = "Social Types";
+    public $table_type_plural   = "Social Types";
 
     /*
      * Lookup table type, in the singular
      */
-    protected $table_type_singular  = "Social Type";
+    public $table_type_singular  = "Social Type";
 
     /*
      * Lookup table name
      */
-    protected $table_name           = "lookup_social_types";
+    public $table_name           = "lookup_social_types";
 
     /*
      * This lookup table's model class namespace
      */
-    protected $model_namespace      = "Lasallecrm\Lasallecrmapi\Models";
+    public $model_namespace      = "Lasallecrm\Lasallecrmapi\Models";
 
     /*
      * This lookup table's model class
      */
-    protected $model_class          = "Lookup_social_type";
+    public $model_class          = "Lookup_social_type";
 
     /*
      * The base URL of this lookup table's resource routes
      */
-    protected $resource_route_name   = "lusocials";
+    public $resource_route_name   = "lusocials";
+
+    /*
+     * Suppress the delete button when just one record to list, in the listings (index) page
+     *
+     * true  = suppress the delete button when just one record to list
+     * false = display the delete button when just one record to list
+     *
+     * @var bool
+     */
+    public $suppress_delete_button_when_one_record = false;
+
 
 
 

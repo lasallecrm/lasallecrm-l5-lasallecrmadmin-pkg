@@ -42,13 +42,13 @@ use Lasallecms\Lasallecmsapi\Repositories\BaseRepository;
 ///////          THIS IS THE ONLY THING YOU HAVE TO           /////
 ///////              SPECIFY IN THIS CONTROLLER               /////
 ///////////////////////////////////////////////////////////////////
-use Lasallecrm\Lasallecrmapi\Models\Address as Model;
+use Lasallecrm\Lasallecrmapi\Models\Email as Model;
 
 
 /*
  * Resource controller for administration of posts
  */
-class AdminCRMAddressesController extends AdminFormBaseController
+class AdminCRMEmailsController extends AdminFormBaseController
 {
     /*
      * @param  Model, as specified above
