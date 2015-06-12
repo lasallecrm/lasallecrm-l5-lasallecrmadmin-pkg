@@ -19,7 +19,7 @@ LaSalle Customer Relationship Management's administration package.
 
 In config/app.php:
 ```
-'Lasallecrm\Lasallecrmadmin\LasallecrmadminServiceProvider',
+Lasallecrm\Lasallecrmadmin\LasallecrmadminServiceProvider::class,
 ```
 
 
