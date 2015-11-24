@@ -35,19 +35,42 @@
 Route::group(array('prefix' => 'admin'), function()
 {
     Route::resource('crmaddresses', 'AdminCRMAddressesController');
+    Route::post('crmaddresses/confirmDeletion/{id}', 'AdminCRMAddressesController@confirmDeletion');
+
     Route::resource('crmcompanies', 'AdminCRMCompaniesController');
+    Route::post('crmcompanies/confirmDeletion/{id}', 'AdminCRMCompaniesController@confirmDeletion');
+
     Route::resource('crmemails', 'AdminCRMEmailsController');
+    Route::post('crmemails/confirmDeletion/{id}', 'AdminCRMEmailsController@confirmDeletion');
+
     Route::resource('crmpeoples', 'AdminCRMPeoplesController');
+    Route::post('crmpeoples/confirmDeletion/{id}', 'AdminCRMPeoplesController@confirmDeletion');
+
     Route::resource('crmsocials', 'AdminCRMSocialsController');
+    Route::post('crmsocials/confirmDeletion/{id}', 'AdminCRMSocialsController@confirmDeletion');
+
     Route::resource('crmtelephones', 'AdminCRMTelephonesController');
+    Route::post('crmtelephones/confirmDeletion/{id}', 'AdminCRMTelephonesController@confirmDeletion');
+
     Route::resource('crmwebsites', 'AdminCRMWebsitesController');
+    Route::post('crmwebsites/confirmDeletion/{id}', 'AdminCRMWebsitesController@confirmDeletion');
+
 
     // Lookup Tables
     Route::resource('luaddresses', 'AdminLookupAddressTypesController');
+    Route::post('luaddresses/confirmDeletion/{id}', 'AdminLookupAddressTypesController@confirmDeletion');
+
     Route::resource('luemails', 'AdminLookupEmailTypesController');
+    Route::post('luemails/confirmDeletion/{id}', 'AdminLookupEmailTypesController@confirmDeletion');
+
     Route::resource('lusocials', 'AdminLookupSocialTypesController');
+    Route::post('lusocials/confirmDeletion/{id}', 'AdminLookupSocialTypesController@confirmDeletion');
+
     Route::resource('lutelephones', 'AdminLookupTelephoneTypesController');
+    Route::post('lutelephones/confirmDeletion/{id}', 'AdminLookupTelephoneTypesController@confirmDeletion');
+
     Route::resource('luwebsites', 'AdminLookupWebsiteTypesController');
+    Route::post('luwebsites/confirmDeletion/{id}', 'AdminLookupWebsiteTypesController@confirmDeletion');
 
 });
 
