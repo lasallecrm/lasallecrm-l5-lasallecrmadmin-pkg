@@ -36,24 +36,38 @@ Route::group(array('prefix' => 'admin'), function()
 {
     Route::resource('crmaddresses', 'AdminCRMAddressesController');
     Route::post('crmaddresses/confirmDeletion/{id}', 'AdminCRMAddressesController@confirmDeletion');
+    Route::post('crmaddresses/confirmDeletionMultipleRows', 'AdminCRMAddressesController@confirmDeletionMultipleRows');
+    Route::post('crmaddresses/destroyMultipleRecords', 'AdminCRMAddressesController@destroyMultipleRecords');
 
     Route::resource('crmcompanies', 'AdminCRMCompaniesController');
     Route::post('crmcompanies/confirmDeletion/{id}', 'AdminCRMCompaniesController@confirmDeletion');
+    Route::post('crmcompanies/confirmDeletionMultipleRows', 'AdminCRMCompaniesController@confirmDeletionMultipleRows');
+    Route::post('crmcompanies/destroyMultipleRecords', 'AdminCRMCompaniesController@destroyMultipleRecords');
 
     Route::resource('crmemails', 'AdminCRMEmailsController');
     Route::post('crmemails/confirmDeletion/{id}', 'AdminCRMEmailsController@confirmDeletion');
+    Route::post('crmemails/confirmDeletionMultipleRows', 'AdminCRMEmailsControllerController@confirmDeletionMultipleRows');
+    Route::post('crmemails/destroyMultipleRecords', 'AdminCRMEmailsController@destroyMultipleRecords');
 
     Route::resource('crmpeoples', 'AdminCRMPeoplesController');
     Route::post('crmpeoples/confirmDeletion/{id}', 'AdminCRMPeoplesController@confirmDeletion');
+    Route::post('crmpeoples/confirmDeletionMultipleRows', 'AdminCRMPeoplesController@confirmDeletionMultipleRows');
+    Route::post('crmpeoples/destroyMultipleRecords', 'AdminCRMPeoplesController@destroyMultipleRecords');
 
     Route::resource('crmsocials', 'AdminCRMSocialsController');
     Route::post('crmsocials/confirmDeletion/{id}', 'AdminCRMSocialsController@confirmDeletion');
+    Route::post('crmsocials/confirmDeletionMultipleRows', 'AdminCRMSocialsController@confirmDeletionMultipleRows');
+    Route::post('crmsocials/destroyMultipleRecords', 'AdminCRMSocialsController@destroyMultipleRecords');
 
     Route::resource('crmtelephones', 'AdminCRMTelephonesController');
     Route::post('crmtelephones/confirmDeletion/{id}', 'AdminCRMTelephonesController@confirmDeletion');
+    Route::post('crmtelephones/confirmDeletionMultipleRows', 'AdminCRMTelephonesController@confirmDeletionMultipleRows');
+    Route::post('crmtelephones/destroyMultipleRecords', 'AdminCRMTelephonesController@destroyMultipleRecords');
 
     Route::resource('crmwebsites', 'AdminCRMWebsitesController');
     Route::post('crmwebsites/confirmDeletion/{id}', 'AdminCRMWebsitesController@confirmDeletion');
+    Route::post('crmwebsites/confirmDeletionMultipleRows', 'AdminCRMWebsitesController@confirmDeletionMultipleRows');
+    Route::post('crmwebsites/destroyMultipleRecords', 'AdminCRMWebsitesController@destroyMultipleRecords');
 
 
     // Lookup Tables
