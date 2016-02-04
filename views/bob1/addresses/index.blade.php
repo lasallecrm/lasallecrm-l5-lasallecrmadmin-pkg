@@ -51,7 +51,7 @@
 
                             <td align="center">
                                 <a href="{{{ URL::route('admin.'.$resource_route_name.'.edit', $record->id) }}}" class="btn btn-success  btn-xs" role="button">
-                                    <i class="glyphicon glyphicon-edit"></i>
+                                    <i class="fa fa-edit"></i>
                                 </a>
                             </td>
                             <td align="center">
@@ -63,7 +63,7 @@
                                     {!! Form::model($record, array('route' => array('admin.'.$resource_route_name.'.destroy', $record->id), 'method' => 'DELETE')) !!}
 
                                     <button type="submit" class="btn btn-danger btn-xs" data-confirm="Do you really want to DELETE the {!! strtoupper($record->title) !!} {!! strtolower($table_type_singular) !!}?">
-                                        <i class="glyphicon glyphicon-remove"></i>
+                                        <i class="fa fa-times"></i>
                                     </button>
 
                                     {!! Form::close() !!}
