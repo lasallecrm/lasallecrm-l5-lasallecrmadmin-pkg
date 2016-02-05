@@ -46,7 +46,7 @@ Route::group(array('prefix' => 'admin'), function()
 
     Route::resource('crmemails', 'AdminCRMEmailsController');
     Route::post('crmemails/confirmDeletion/{id}', 'AdminCRMEmailsController@confirmDeletion');
-    Route::post('crmemails/confirmDeletionMultipleRows', 'AdminCRMEmailsControllerController@confirmDeletionMultipleRows');
+    Route::post('crmemails/confirmDeletionMultipleRows', 'AdminCRMEmailsController@confirmDeletionMultipleRows');
     Route::post('crmemails/destroyMultipleRecords', 'AdminCRMEmailsController@destroyMultipleRecords');
 
     Route::resource('crmpeoples', 'AdminCRMPeoplesController');
