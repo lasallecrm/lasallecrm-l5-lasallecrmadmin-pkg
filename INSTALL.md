@@ -9,7 +9,7 @@ LaSalle Customer Relationship Management's administration package.
 ```
 {
     "require": {
-        "lasallecrm/lasallecrmadmin": "0.9.*",
+        "lasallecrm/lasallecrmadmin": "1.*",
     }
 }
 ```
