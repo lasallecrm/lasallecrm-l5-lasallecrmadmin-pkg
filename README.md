@@ -11,6 +11,8 @@
 
 Administration package for the LaSalle Customer Relationship Management package.
 
+[MUST READ CAVEAT ABOUT THIS PACKAGE at https://lasallesoftware.ca/caveat_about_lasalle_software_version_one.php](https://lasallesoftware.ca/caveat_about_lasalle_software_version_one.php)
+
 
 ## Security
 
